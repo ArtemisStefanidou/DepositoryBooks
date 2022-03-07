@@ -1,0 +1,215 @@
+/* import the google font that i gonna use for this site */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+/* configure the common parts that the main part of my page and its children have*/
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  color: floralwhite;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.61),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url("../images/bookswall.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #000000;
+}
+
+/*configure the colors of navigation bar of my site-app  and the items that has*/
+.nav {
+  display: flex;
+  /* items are dealt on the line with equal space around them */
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  color: #d9b3ff;
+  background-color: rgb(0, 0, 0);
+}
+
+/* style the the element with topnav id to look like more to menu 
+bar than to a list to user (text-decoration:none)*/
+#topnav {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+#topnav li {
+  display: flex;
+  padding: 10px 60px;
+  align-items: center;
+}
+
+#topnav li a {
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+  color: floralwhite;
+}
+
+/* activated when user do mouse over to the items that includes into the topnav */
+#topnav li a:hover {
+  color: #aaaaaa;
+}
+
+.txt {
+  display: flex;
+  width: 100%;
+  height: 430px;
+  flex-direction: column;
+}
+
+/* do more fancy the look of the button */
+.btn {
+  border: 2px solid #000000;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  /* to do oval the button*/
+  border-radius: 30px;
+}
+
+.btn :hover {
+  color: #000000;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #000000;
+  /* the letters of the button should be visible and
+  the black background should be placed behind it*/
+  z-index: -1;
+  transition: 0.8s;
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.btn:hover::before {
+  height: 180%;
+}
+
+.btn a {
+  font-weight: bold;
+  color: floralwhite;
+}
+
+.btn a:hover {
+  color: #cecdcd;
+}
+
+
+#h1 {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.home #text {
+  font-size: 20px;
+  font-weight: 600;
+  color: floralwhite;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.addBook,
+.searchBook,
+.Books {
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+#sendRequestAdd,
+#searchByKeyword {
+
+  border: 2px solid floralwhite;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  color: floralwhite;
+
+}
+
+#sendRequestAdd:hover,
+#searchByKeyword:hover {
+
+  color: #797676;
+
+}
+
+.addBook,
+.Books {
+
+  background-color: rgb(0, 0, 0, 0.4);
+  color: seashell;
+ 
+}
+
+table,
+td,
+th {
+
+  border: 1px solid white;
+
+}
+
+table {
+
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+footer {
+
+  /* Do not allow to the footer to float on the left or the right side*/
+  clear: both;
+  text-align: center;
+  padding: 10px;
+  background: #000000;
+  color: #ffffff;
+
+}
+
+.social-menu ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-menu ul li {
+  text-align: center;
+  list-style: none;
+}

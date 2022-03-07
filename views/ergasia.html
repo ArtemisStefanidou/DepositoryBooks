@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/styles.css">
+    <!-- δηλωνει τον τυπο του αρχειου μου ,πληροφοριες για ιστοσελιδα-->
+    <meta charset="UTF-8">
+    <meta name="descriprion" content="This is a project in Web Application Technologies for Hua">
+    <title> BooksDepository </title>
+</head>
+
+<body>
+
+    <header>
+        <!-- do the navigation bar to be more easily to use my site the user -->
+        <section class="nav">
+            <ul id="topnav">
+                <li><img class="logo" src="../public/images/bitmap.png" alt="books"></li>
+                <!-- put in href the id of the section that i want to go when user click them  -->
+                <li><a href="#home"> Home </a></li>
+                <li><a href="#addBook"> Add Book </a></li>
+                <li><a href="#search"> Search </a></li>
+                <li><a href="#allBooks"> Books </a></li>
+                <li><a href="#contact"> Contact </a></li>
+            </ul>
+        </section>
+
+        <!-- a mini description for my site-app -->
+        <section class="home">
+
+            <center>
+                <p id="h1">
+                E-BOOK <br> DEPOSITORY  <br>
+                Hua 
+                </p>
+            </center>
+            <p id="text">
+                This website was created <br> as part of the Web Application Technologies of Hua course.
+                <br>On this website we offer to user <br> the ability to manage a remote database containing books.
+            </p>
+            <button class="btn"><a href="#contact">Contact Me</a></button>
+
+
+
+        </section>
+    </header>
+
+    <main>
+
+        <!-- a form tha user can add a book to the database -->
+        <section class="addBook">
+            <div id="addBook">
+
+                <h1  class="top">
+                    <bold>Registration of a new book</bold>
+                </h1>
+
+                
+                    <label for="author"><b>Author:</b></label><br>
+                    <input type="text" id="author" name="author" placeholder="Artemis" required><br><br>
+
+                    <label for="title"><b>Title Of The Book:</b></label><br>
+                    <input type="text" id="title" name="title" placeholder="Measurement" required><br><br>
+
+                    <label for="price"><b>Price Of The Book:</b></label><br>
+                    <input type="number" id="price" name="price" placeholder="8.30" step="0.01" required><br><br>
+
+                    <label for="genre"><b>Choose the Genre:</b></label><br>
+                    <select name="genre" id="genre">
+                        <option label="--Select Genre--" value="select"></option>
+                        <option value="scienceFiction">Science Fiction</option>
+                        <option value="satire">Satire</option>
+                        <option value="drama">Drama</option>
+                        <option value="actionAdventure">Action and Adventure</option>
+                        <option value="romance">Romance</option>
+                        <option value="mystery">Mystery</option>
+                        <option value="horror">Horror</option>
+                    </select>
+                    <br><br>
+                    <input type="submit" id="sendRequestAdd" value="Submit">
+                
+
+            </div>
+        </section>
+
+        <!-- a section for search a title of a book by given the user a key -->
+        <section class="searchBook">
+            <div class="row" id="search">
+
+                <h1 class="top">
+                    <bold>Search The Book That You Want </bold>
+                </h1>
+
+                <label for="search"><b>Type A Key Word <br>For The Book:</b></label><br>
+                <input type="text" id="keyword" name="keyword" placeholder="Artemis">
+                <input type="submit" id="searchByKeyword" value="Search">
+                <div id="listBook"></div>
+
+            </div>
+        </section>
+
+        <!-- a section that prints all the books tha exist in the database(to see the book that add do please reload the page) -->
+        <section class="Books">
+            <div class="row" id="allBooks">
+
+                <h1 class="top">
+                    <bold>All The Books That Exists</bold>
+                </h1>
+                <div id="printBooks"></div>
+            </div>
+        </section>
+    </main>
+                             <!-- footer starts -->
+    <footer id="contact">
+        <h1><b>Contact Me</b></h1>
+        <h4>For any extra information please contact me</h4>
+        <div class="social-menu">
+            <ul>
+                <li>
+                    <a href="https://github.com/ArtemisStefanidou">
+                        <img src="../public/images/github.png" alt="github">
+                    </a>
+                </li>
+                <li> <img src="../public/images/email.png" alt="e-mail"> your@email.com</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../public/javascripts/js.js"></script>
+
+</body>
+
+
+
+</html>
